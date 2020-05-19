@@ -5,9 +5,23 @@
 		<title></title>
 	</head>
 	<body>
-		<h1>nih</h1>
+		<ul id="ul">
+			<li >one</li>
+			<li>two</li>
+		</ul>
+		<button id="btu">添加</button>
 	</body>
 	<script>
+		document.getElementById("ul").addEventListener("click",function(e){
+			if(!(e.target==this)){
+				e.target.style.color="#f00"
+			}
+		})
+		
+		document.getElementById("btu").onclick=function(){
+			var li=document.createElement("li")
+			document.getElementById("ul").appendChild(li)
+		}
 		
 	</script>
 </html>
